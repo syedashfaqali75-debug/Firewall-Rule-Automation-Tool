@@ -1,0 +1,11 @@
+firewall-automation/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/tool/
+│   │   │       ├── engine/       # Core automation logic
+│   │   │       ├── model/        # Rule definitions
+│   │   │       └── util/         # Parser and validator
+├── config/
+│   └── rules.json                # User-defined firewall rules
+└── README.md

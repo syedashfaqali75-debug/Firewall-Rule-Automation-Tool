@@ -1,0 +1,17 @@
+---
+- name: Update Firewall Rules
+  hosts: firewall_cluster
+  connection: local
+  tasks:
+    - name: Allow HTTPS to Web Server
+      paloaltonetworks.panos.panos_security_rule:
+        provider: "{{ device_auth }}"
+        rule_name: 'Allow-HTTPS-Inbound'
+        source_zone: ['outside']
+        destination_zone: ['dmz']
+        source_ip: ['any']
+        destination_ip: ['10.0.1.50']
+        application: ['ssl', 'web-browsing']
+        service: ['service-https']
+        action: 'allow'
+        commit: yes

@@ -1,0 +1,26 @@
+/*
+LICENSE: Mozilla Public License 2.0
+This automated configuration manages firewall ingress rules.
+*/
+
+# Define the Provider (The API we are talking to)
+provider "google" {
+  project = "your-project-id"
+  region  = "us-central1"
+}
+
+# Automation Rule: Allow Inbound HTTPS Traffic
+resource "google_compute_firewall" "allow_https" {
+  name    = "automated-allow-https"
+  network = "default"
+
+  allow {
+    protocol = "tcp"
+    ports    = ["443"]
+  }
+
+  # Targets instances with the 'web-server' tag
+  target_tags   = ["web-server"]
+  source_ranges = ["0.0.0.0/0"]
+  priority      = 1000
+}

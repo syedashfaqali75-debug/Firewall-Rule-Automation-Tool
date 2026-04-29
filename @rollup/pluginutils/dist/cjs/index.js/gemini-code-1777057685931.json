@@ -1,0 +1,13 @@
+[
+  {
+    "id": 1714000000000,
+    "addedBy": "DevOps_Admin_Sarah",
+    "createdAt": "2026-04-25T12:37:00Z",
+    "rule": {
+      "ip": "192.168.1.50",
+      "port": 8080,
+      "protocol": "TCP"
+    },
+    "status": "active"
+  }
+]

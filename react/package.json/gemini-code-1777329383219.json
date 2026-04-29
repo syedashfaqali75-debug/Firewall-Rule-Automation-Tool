@@ -1,0 +1,40 @@
+{
+  "name": "firewall-automation-engine",
+  "version": "1.0.0",
+  "description": "Unified Security-as-Code tool for automated firewall rule deployment and runtime validation.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node jsx-dev-runtime.js",
+    "prod": "node jsx-runtime.js",
+    "server:deploy": "node jsx-runtime.react-server.js",
+    "validate": "node compiler-runtime.js",
+    "lint": "eslint '**/*.js'",
+    "audit": "npm audit"
+  },
+  "keywords": [
+    "firewall",
+    "automation",
+    "security-as-code",
+    "jsx-runtime",
+    "network-security"
+  ],
+  "author": "Security Engineering Team",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1",
+    "chalk": "^4.1.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.52.0",
+    "prettier": "^3.0.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-org/firewall-automation.git"
+  }
+}

@@ -1,0 +1,4 @@
+[
+  { "id": "ssh-access", "port": 22, "action": "ALLOW" },
+  { "id": "public-http", "port": 80, "action": "ALLOW" }
+]

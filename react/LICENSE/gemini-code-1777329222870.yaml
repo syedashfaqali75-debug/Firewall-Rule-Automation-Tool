@@ -1,0 +1,15 @@
+---
+- name: Automate Firewall Rule Deployment
+  hosts: firewalls
+  connection: local
+  gather_facts: no
+
+  tasks:
+    - name: Create an Inbound Allow Rule
+      # This example uses the firewalld module, but can be swapped for Cisco/Palo Alto
+      ansible.posix.firewalld:
+        service: https
+        permanent: yes
+        state: enabled
+        zone: public
+        immediate: yes

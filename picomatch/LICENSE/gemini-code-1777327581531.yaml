@@ -1,0 +1,22 @@
+---
+- name: Firewall Rule Automation
+  hosts: firewall_devices
+  connection: local
+  gather_facts: false
+
+  tasks:
+    - name: Create Single Security Rule
+      paloaltonetworks.panos.panos_security_rule:
+        provider:
+          ip_address: "192.168.1.1"
+          username: "admin"
+          password: "password123"
+        rule_name: 'Allow_Web_Traffic'
+        source_zone: ['Trust']
+        destination_zone: ['Untrust']
+        source_ip: ['any']
+        destination_ip: ['10.0.0.50']
+        application: ['web-browsing', 'ssl']
+        service: ['service-http', 'service-https']
+        action: 'allow'
+        commit: yes

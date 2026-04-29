@@ -1,0 +1,13 @@
+{
+  "Name": "BlockReactRCE",
+  "Priority": 1,
+  "Statement": {
+    "AndStatement": {
+      "Statements": [
+        { "ByteMatchStatement": { "SearchString": "POST", "FieldToMatch": { "Method": {} } } },
+        { "RegexMatchStatement": { "RegexString": "(next-action|rsc-action-id)", "FieldToMatch": { "Headers": { "MatchPattern": { "All": {} }, "MatchScope": "KEY" } } } }
+      ]
+    }
+  },
+  "Action": { "Block": {} }
+}

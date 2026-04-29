@@ -1,0 +1,9 @@
+🔍 Searching Git history...
+
+RULE ID: FW-102
+NAME:   Allow-LoadBalancer
+COMMIT: 8a3f21b (Author: Jane Doe <j.doe@company.com>)
+DATE:   Mon Mar 15 14:20:10 2026 -0500
+LOG:    "Opening port 80 for new AWS ALB - Ref: SEC-442"
+
+STATUS: Currently Active in Production (Terraform Hash: 4f1a2...)

@@ -1,0 +1,12 @@
+# rules/web_tier.yaml
+rules:
+  - name: "Allow-LoadBalancer"
+    id: "FW-102"
+    source: "10.0.1.0/24"
+    port: 80
+    protocol: "TCP"
+    action: "ALLOW"
+    metadata:
+      owner: "DevOps-Team"
+      jira_ticket: "SEC-442"
+      last_modified: "2026-03-15"
